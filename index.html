@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks - Happy Hour</title>
+    <!-- Importação das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- FavIcon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header--container">
+        <img
+          src="./assets/img/logo.png"
+          alt="Logo do Starbucks"
+          class="header__logo"
+        />
+        <nav class="header__nav">
+          <div class="nav__form-group">
+            <form class="nav__form">
+              <input
+                type="search"
+                name="search"
+                id="form__search"
+                class="form__search"
+                placeholder="Search"
+              />
+              <button class="form__button">
+                <img
+                  src="./assets/img/loupe.png"
+                  alt="Lupa de pesquisa"
+                  class="form__loupe"
+                />
+              </button>
+            </form>
+          </div>
+          <div class="nav__menu-hamburguer" id="menu-hamburguer">
+            <img
+              src="./assets/img/menu.png"
+              alt="Botão menu hamburguer"
+              onclick="acionaMenuHamburguer()"
+              class="hamburguer__button"
+            />
+          </div>
+        </nav>
+      </div>
+      <div class="header__menu animar header__menu--inactive" id="header__menu">
+        <nav class="menu__nav">
+          <i
+            class="fa fa-close fa-2x fa-white"
+            onclick="acionaMenuHamburguer()"
+            aria-hidden="true"
+          ></i>
+          <ul class="menu__ul">
+            <li class="menu__li">
+              <a href="#" class="menu__anchor">Pagina 5</a>
+            </li>
+            <li class="menu__li">
+              <a href="#" class="menu__anchor">Pagina 4</a>
+            </li>
+            <li class="menu__li">
+              <a href="#" class="menu__anchor">Pagina 3</a>
+            </li>
+            <li class="menu__li">
+              <a href="#" class="menu__anchor">Pagina 2</a>
+            </li>
+            <li class="menu__li">
+              <a href="#" class="menu__anchor">Pagina 1</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="banner--container">
+          <div class="banner__division-1">
+            <div class="division-1__content">
+              <h2 class="division-1__title">
+                Starbucks&#174; <br />
+                Happy Hour
+              </h2>
+              <p class="division-1__paragraph">
+                We&#8217;ll meet you in your inbox. Drink deals are on their
+                way.
+              </p>
+            </div>
+            <div class="division-1__imagens">
+              <img
+                src="./assets/img/c1.jpg"
+                class="division-1__imagem"
+                alt="Imagem de um produto do Starbucks"
+              />
+              <img
+                src="./assets/img/c2.jpg"
+                class="division-1__imagem"
+                alt="Imagem de um produto do Starbucks"
+              />
+              <img
+                src="./assets/img/c3.jpg"
+                class="division-1__imagem"
+                alt="Imagem de um produto do Starbucks"
+              />
+            </div>
+          </div>
+          <div class="banner__division-2"></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- Scripts -->
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
