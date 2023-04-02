@@ -1,6 +1,9 @@
 :root {
   --open: "Open Sans", sans-serif;
   --oswald: "Oswald", sans-serif;
+  --verde: #117050;
+  --branco: #ffffff;
+  --cinza: #ffffff94;
 }
 * {
   box-sizing: border-box;
@@ -21,7 +24,7 @@ HEADER
 */
 
 .header {
-  border-top: 0.5rem solid #117050;
+  border-top: 0.5rem solid var(--verde);
   display: flex;
   justify-content: center;
   padding: 1rem 0rem;
@@ -59,23 +62,23 @@ HEADER
 }
 .fa-white {
   justify-self: end;
-  color: #ffffff;
+  color: var(--branco);
   cursor: pointer;
 }
 .menu__anchor {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--branco);
 }
 .menu__li {
   padding: 0.5rem 0rem;
 }
 .menu__li:hover {
-  border-right: 0.5rem solid white;
-  background-color: #ffffff94;
+  border-right: 0.5rem solid var(--branco);
+  background-color: var(--cinza);
 }
 .menu__li::before {
   content: "🠞";
-  color: #ffffff;
+  color: var(--branco);
 }
 .menu__ul {
   list-style-type: none;
@@ -105,7 +108,7 @@ HEADER
   padding: 0.375rem;
 }
 .form__button {
-  background-color: #ffffff;
+  background-color: var(--branco);
   border: none;
   cursor: pointer;
   height: 2.1125rem;
@@ -179,7 +182,7 @@ MAIN BANNER
 .division-1__imagem {
   width: 10rem;
   height: 10rem;
-  border: 0.375rem solid #117050;
+  border: 0.375rem solid var(--verde);
   border-radius: 5rem;
 }
 .division-1__content {
@@ -212,4 +215,65 @@ MAIN BANNER
   .banner--container {
     grid-template-columns: 1fr;
   }
+}
+
+/* 
+
+SEÇÃO GAGA
+
+*/
+.gaga {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 21.6875rem;
+}
+.gaga__content {
+  justify-self: center;
+  background-color: var(--branco);
+  padding: 3.75rem 0rem;
+  width: 30.625rem;
+  grid-row: 1;
+  grid-column: 1;
+}
+.gaga__image-1 {
+  background-image: url(./../img/f2.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-row: 2;
+  grid-column: 1;
+}
+.gaga__image-2 {
+  background-image: url(./../img/f1.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-row: span 2;
+  grid-column: 2;
+}
+.gaga__titulo {
+  font-family: var(--oswald);
+  font-size: 2.25rem;
+}
+.gaga__titulo::after {
+  content: "";
+  width: 10.5rem;
+  height: 1.375rem;
+  background-color: var(--verde);
+  position: relative;
+  top: -4.75rem;
+  display: block;
+}
+.gaga__citation {
+  font-style: italic;
+}
+.gaga__paragrafo {
+  margin-top: 1.5rem;
+}
+.gaga__botao {
+  background-color: var(--branco);
+  border: 2px solid #6d6d6d;
+  color: #6d6d6d;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
