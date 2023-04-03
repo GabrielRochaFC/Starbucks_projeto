@@ -131,7 +131,7 @@ HEADER
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 37.5rem) {
+@media screen and (max-width: 53.125rem) {
   .header__logo {
     width: 3.375rem;
   }
@@ -194,7 +194,7 @@ MAIN BANNER
   font-size: 6rem;
   line-height: 1.1;
 }
-@media screen and (max-width: 37.5rem) {
+@media screen and (max-width: 53.125rem) {
   .division-1__imagens {
     column-gap: 0.5rem;
     display: flex;
@@ -228,19 +228,22 @@ SEÇÃO GAGA
   grid-template-rows: 1fr 21.6875rem;
 }
 .gaga__content {
-  justify-self: center;
   background-color: var(--branco);
-  padding: 3.75rem 0rem;
-  width: 30.625rem;
-  grid-row: 1;
+  display: grid;
   grid-column: 1;
+  grid-row: 1;
+  grid-row: auto;
+  justify-self: center;
+  margin: 0rem 1rem;
+  padding: 3.75rem 0rem;
+  width: 60%;
 }
 .gaga__image-1 {
   background-image: url(./../img/f2.jpg);
   background-position: center;
   background-size: cover;
-  grid-row: 2;
   grid-column: 1;
+  grid-row: 2;
 }
 .gaga__image-2 {
   background-image: url(./../img/f1.jpg);
@@ -253,20 +256,16 @@ SEÇÃO GAGA
   font-family: var(--oswald);
   font-size: 2.25rem;
 }
-.gaga__titulo::after {
-  content: "";
+.gaga__bar {
   width: 10.5rem;
   height: 1.375rem;
   background-color: var(--verde);
-  position: relative;
-  top: -4.75rem;
-  display: block;
 }
 .gaga__citation {
   font-style: italic;
 }
 .gaga__paragrafo {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0rem;
 }
 .gaga__botao {
   background-color: var(--branco);
@@ -274,6 +273,17 @@ SEÇÃO GAGA
   color: #6d6d6d;
   padding: 0.5rem 2rem;
   border-radius: 0.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  justify-self: start;
+}
+@media screen and (max-width: 53.125rem) {
+  .gaga {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 21.6875rem 49rem;
+  }
+  .gaga__image-2 {
+    grid-column: 1;
+  }
+  .gaga__content {
+    width: 80%;
+  }
 }
