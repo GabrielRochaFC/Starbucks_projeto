@@ -219,6 +219,63 @@ MAIN BANNER
 
 /* 
 
+SEÇÃO COMUM
+
+*/
+.gaga__content,
+.vanilla__content,
+.caramel__content,
+.kindess__content {
+  background-color: var(--branco);
+  display: grid;
+  grid-template-rows: auto;
+  justify-self: center;
+  margin: 3.75rem 1rem;
+  width: 50%;
+}
+.gaga__bar,
+.vanilla__bar,
+.kindness__bar,
+.footer__bar {
+  width: 10.5rem;
+  height: 1.375rem;
+  background-color: var(--verde);
+}
+.gaga__titulo,
+.vanilla__titulo,
+.caramel__titulo,
+.kindness__titulo,
+.footer__titulo {
+  font-family: var(--oswald);
+  font-size: 2.25rem;
+}
+
+.gaga__paragrafo,
+.vanilla__paragrafo,
+.caramel__paragrafo,
+.kindness__paragrafo {
+  margin: 1.5rem 0rem;
+}
+.gaga__botao,
+.vanilla__botao,
+.caramel__botao,
+.kindness__botao {
+  background-color: var(--branco);
+  border: 2px solid #6d6d6d;
+  color: #6d6d6d;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  justify-self: start;
+}
+
+@media screen and (max-width: 53.125rem) {
+  .gaga__content {
+    width: 75%;
+  }
+}
+
+/*
+
 SEÇÃO GAGA
 
 */
@@ -228,16 +285,10 @@ SEÇÃO GAGA
   grid-template-rows: 1fr 21.6875rem;
 }
 .gaga__content {
-  background-color: var(--branco);
-  display: grid;
   grid-column: 1;
   grid-row: 1;
-  grid-row: auto;
-  justify-self: center;
-  margin: 0rem 1rem;
-  padding: 3.75rem 0rem;
-  width: 60%;
 }
+
 .gaga__image-1 {
   background-image: url(./../img/f2.jpg);
   background-position: center;
@@ -247,34 +298,17 @@ SEÇÃO GAGA
 }
 .gaga__image-2 {
   background-image: url(./../img/f1.jpg);
+  height: 100%;
   background-position: center;
   background-size: cover;
   grid-row: span 2;
   grid-column: 2;
 }
-.gaga__titulo {
-  font-family: var(--oswald);
-  font-size: 2.25rem;
-}
-.gaga__bar {
-  width: 10.5rem;
-  height: 1.375rem;
-  background-color: var(--verde);
-}
+
 .gaga__citation {
   font-style: italic;
 }
-.gaga__paragrafo {
-  margin: 1.5rem 0rem;
-}
-.gaga__botao {
-  background-color: var(--branco);
-  border: 2px solid #6d6d6d;
-  color: #6d6d6d;
-  padding: 0.5rem 2rem;
-  border-radius: 0.25rem;
-  justify-self: start;
-}
+
 @media screen and (max-width: 53.125rem) {
   .gaga {
     grid-template-columns: 100%;
@@ -283,7 +317,222 @@ SEÇÃO GAGA
   .gaga__image-2 {
     grid-column: 1;
   }
-  .gaga__content {
-    width: 80%;
+}
+
+/* 
+
+SECTION VANILLA
+
+*/
+
+.vanilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.vanilla__image-1 {
+  grid-column: 1;
+  grid-row: span 2;
+  background-image: url(./../img/f3.jpg);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.vanilla__content {
+  grid-column: 2;
+  grid-row: 1;
+}
+.vanilla__image-2 {
+  grid-column: 2;
+  grid-row: 2;
+  background-image: url(./../img/f4.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 28.125rem;
+}
+@media screen and (max-width: 53.125rem) {
+  .vanilla {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+  }
+  .vanilla__image-1 {
+    height: 100vh;
+    grid-row: 1;
+  }
+  .vanilla__content {
+    grid-column: 1;
+    grid-row: 2;
+    width: 75%;
+  }
+  .vanilla__image-2 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* 
+
+SEÇÃO CARAMEL
+
+*/
+.caramel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80vh;
+}
+.caramel__texts {
+  background-image: url(./../img/bg2.jpg);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+.caramel__content {
+  align-self: center;
+  justify-self: end;
+  margin-right: 10%;
+  background-color: #ffffff00;
+}
+.caramel__botao {
+  background-color: #ffffff00;
+}
+.caramel__image {
+  background-image: url(./../img/f5.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  grid-column: 2;
+  grid-row: 1;
+}
+@media screen and (max-width: 53.125rem) {
+  .caramel {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .caramel__content {
+    justify-self: center;
+    margin: 3.75rem 1rem;
+    width: 75%;
+  }
+  .caramel__image {
+    grid-column: 1;
+    grid-row: 2;
+    height: 50vh;
+  }
+}
+
+/* 
+
+SECTION KINDNESS
+
+*/
+.kindness {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #e8e9ee;
+}
+.kindess__content {
+  justify-self: end;
+  background-color: #ffffff00;
+  margin: 12rem 2rem;
+  width: 50%;
+}
+.kindness__botao {
+  background-color: #e8e9ee;
+}
+.kindness__image {
+  background-image: url(./../img/bg3.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 53.125rem) {
+  .kindness {
+    grid-template-columns: 100%;
+  }
+  .kindess__content {
+    width: 75%;
+  }
+}
+
+/* 
+
+FOOTER 
+
+*/
+
+.footer--container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  width: 71.25rem;
+  padding: 2rem 0rem;
+  column-gap: 2rem;
+  color: var(--branco);
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+}
+.footer__bar {
+  grid-row: 1;
+  grid-column: span 3;
+}
+.footer__titulo {
+  grid-row: 2;
+  grid-column: span 3;
+  margin-bottom: 1rem;
+}
+.footer__developed {
+  grid-row: 4;
+  grid-column: span 3;
+  justify-self: center;
+  padding: 2rem 0rem;
+  font-style: italic;
+}
+.developed--heart {
+  color: #ff0000;
+}
+.developed--name {
+  color: var(--verde);
+  font-weight: 900;
+}
+.info-2__ul {
+  padding-bottom: 0.5rem;
+}
+.info-2__li {
+  margin-left: 1rem;
+}
+@media screen and (max-width: 53.125rem) {
+  .footer--container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 2rem 1rem;
+    row-gap: 2rem;
+  }
+  .footer__bar {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .footer__titulo {
+    grid-row: 2;
+    grid-column: 1;
+    margin-bottom: 1rem;
+  }
+  .footer__developed {
+    grid-row: 6;
+    grid-column: 1;
+    justify-self: center;
+    padding: 2rem 0rem;
+    font-style: italic;
+  }
+  .developed--heart {
+    color: #ff0000;
+  }
+  .developed--name {
+    color: var(--verde);
+    font-weight: 900;
   }
 }
