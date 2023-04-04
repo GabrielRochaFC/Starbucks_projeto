@@ -455,6 +455,7 @@ SECTION KINDNESS
   }
   .kindess__content {
     width: 75%;
+    justify-self: center;
   }
 }
 
@@ -472,6 +473,7 @@ FOOTER
   padding: 2rem 0rem;
   column-gap: 2rem;
   color: var(--branco);
+  margin: 0rem 1rem;
 }
 .footer {
   display: flex;
